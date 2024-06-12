@@ -4,17 +4,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>registration form</title>
+  <title>Registration Form</title>
   <style>
     body {
       text-align: left;
-      margin: 20%;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-bottom: 10%;
     }
 
     form {
       width: 100%;
-      background-color: lightskyblue;
-      padding: 40px;
+      background-color: lightblue;
+      padding: 30px;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-row label {
+      width: 100px;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row input[type="number"],
+    .form-row select {
+      flex: 1;
+      max-width: 300px;
+      padding: 5px;
+    }
+
+    .form-row input[type="radio"],
+    .form-row input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .qualification table {
+      width: 80%;
+    }
+
+    .qualification th,
+    .qualification td {
+      padding: 1px;
+      text-align: center;
+    }
+
+    .submit-reset {
+      text-align: center;
     }
   </style>
 </head>
@@ -23,56 +64,84 @@
   <div class="form">
     <h1 style="text-align: center; color: lightblue;">Student Registration Form</h1>
     <form>
-      <label for="fname">First Name</label>
-      <input type="text" name="fname" maxlength="30"> (max 30characters a-z and A-Z)<br><br>
-      <label for="lname">Last Name</label>
-      <input type="text" name="lname" maxlength="30"> (max 30characters a-z and A-Z)<br><br>
-      <label for="dob">DATE OF BIRTH:</label>
-      <select id="day" name="day">Day
-        <option value="Day">Day</option>
-      </select>
-      <select id="Month" name="Month">Month
-        <option value="Month">Month</option>
-      </select>
-      <select id="year" name="year">Year
-        <option value="year">Year</option>
-      </select><br><br>
+      <div class="form-row">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" maxlength="30"> (max 30 characters a-z and A-Z)
+      </div>
 
-      <label for="Email id">Email id</label>
-      <input type="email" name="Email id"><br><br>
-      <label for="Mobile number">Mobile Number</label>
-      <input type="number" name="Mobile number" maxlength="10">(10 digit mobile number)<br><br>
-      <label for="Gender">Gender</label>
-      <input type="radio" name="Gender" value="Male">Male
-      <input type="radio" name="Gender" value="Female">Female<br><br>
-      <label for="Address">Address</label>
-      <input type="text" name="Address" style="height: 50px; width: 200px;"><br><br>
-      <label for="city">City</label>
-      <input type="text" name="city" maxlength="30"> (max 30characters a-z and A-Z)<br><br>
-      <label for="Pincode">Pincode</label>
-      <input type="number" name="Pincode" maxlength="6"> (6 digit number)<br><br>
-      <label for="state">State</label>
-      <input type="text" name="state" maxlength="30"> (max 30characters a-z and A-Z)<br><br>
-      <label for="country">Country</label>
-      <select>
-        <option value="india">India</option>
-      </select><br><br>
-      <label for="hobbies">Hobbies</label>
-      <label for="hobbies"> Dancing</label>
-      <input type="checkbox" name="hobbies" value="Dancing">
-      <label for="hobbies">singing</label>
-      <input type="checkbox" name="hobbies" value="Singing">
-      <label for="hobbies"> Drawing</label>
-      <input type="checkbox" name="hobbies" value="Drawing">
-      <label for="hobbies"> Sketching</label>
-      <input type="checkbox" name="hobbies" value="Sketching"><br>
-      <label for="hobbies"> others</label>
-      <input type="checkbox" name="hobbies" value="others">
-      <label for="hobbies"></label>
-      <input type="text" name="hobbies"><br><br>
+      <div class="form-row">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" maxlength="30"> (max 30 characters a-z and A-Z)
+      </div>
+
+      <div class="form-row">
+        <label for="dob">Date of Birth</label>
+        <select id="day" name="day">
+          <option value="Day">Day</option>
+        </select>
+        <select id="Month" name="Month">
+          <option value="Month">Month</option>
+        </select>
+        <select id="year" name="year">
+          <option value="Year">Year</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="Email id">Email id</label>
+        <input type="email" name="Email id">
+      </div>
+
+      <div class="form-row">
+        <label for="Mobile number">Mobile Number</label>
+        <input type="number" name="Mobile number" maxlength="10"> (10 digit mobile number)
+      </div>
+
+      <div class="form-row">
+        <label for="Gender">Gender</label>
+        <input type="radio" name="Gender" value="Male">Male
+        <input type="radio" name="Gender" value="Female">Female
+      </div>
+
+      <div class="form-row">
+        <label for="Address">Address</label>
+        <input type="text" name="Address" style="height: 50px;">
+      </div>
+
+      <div class="form-row">
+        <label for="city">City</label>
+        <input type="text" name="city" maxlength="30"> (max 30 characters a-z and A-Z)
+      </div>
+
+      <div class="form-row">
+        <label for="Pincode">Pincode</label>
+        <input type="number" name="Pincode" maxlength="6"> (6 digit number)
+      </div>
+
+      <div class="form-row">
+        <label for="state">State</label>
+        <input type="text" name="state" maxlength="30"> (max 30 characters a-z and A-Z)
+      </div>
+
+      <div class="form-row">
+        <label for="country">Country</label>
+        <select>
+          <option value="india">India</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" name="hobbies" value="Dancing"> Dancing
+        <input type="checkbox" name="hobbies" value="Singing"> Singing
+        <input type="checkbox" name="hobbies" value="Drawing"> Drawing
+        <input type="checkbox" name="hobbies" value="Sketching"> Sketching
+        <input type="checkbox" name="hobbies" value="others"> Others
+        <input type="text" name="hobbies">
+      </div>
 
       <div class="qualification">
-        QUALIFICATION<br>
+        <h2>Qualification</h2>
         <table>
           <tr>
             <th>S.No.</th>
@@ -110,20 +179,20 @@
             <td><input type="text" name="year4" maxlength="4"></td>
           </tr>
         </table>
-
       </div>
-      <label for="caf">Course applied for</label>
-      <input type="radio" name="caf" value="BCA">BCA
-      <input type="radio" name="caf" value="B.com">B.com
-      <input type="radio" name="caf" value="B.Sc">B.Sc
-      <input type="radio" name="caf" value="B.A">B.A
-      <br><br>
 
-      <div class="submit-reset" style="text-align:center">
+      <div class="form-row">
+        <label for="caf">Course applied for</label>
+        <input type="radio" name="caf" value="BCA">BCA
+        <input type="radio" name="caf" value="B.com">B.com
+        <input type="radio" name="caf" value="B.Sc">B.Sc
+        <input type="radio" name="caf" value="B.A">B.A
+      </div>
+
+      <div class="submit-reset">
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
       </div>
-
     </form>
   </div>
 </body>
