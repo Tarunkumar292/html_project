@@ -8,8 +8,8 @@
   <style>
     body {
       text-align: left;
-      margin-left: 20%;
-      margin-right: 20%;
+      margin-left: 25%;
+      margin-right: 25%;
       margin-bottom: 10%;
     }
 
@@ -57,13 +57,14 @@
     .submit-reset {
       text-align: center;
     }
+
   </style>
 </head>
 
 <body>
   <div class="form">
-    <h1 style="text-align: center; color: lightblue;">Student Registration Form</h1>
-    <form method="POST" action="server_script.php">
+    <h1 style="text-align: center; color: lightblue; border-bottom: 1px solid lightblue; padding-bottom: 1px;">Student Registration Form</h1>
+    <form method="POST" action="server_script.php"> 
       <div class="form-row">
         <label for="fname">First Name</label>
         <input type="text" name="fname" maxlength="30"> (max 30 characters a-z and A-Z)
@@ -74,7 +75,7 @@
         <input type="text" name="lname" maxlength="30"> (max 30 characters a-z and A-Z)
       </div>
 
-      <div class="form-row">
+      <div class="form-row" style="max-width: 300px;">
         <label for="dob">Date of Birth</label>
         <select id="day" name="day">
           <option value="Day">Day</option>
@@ -137,7 +138,7 @@
         <input type="checkbox" name="hobbies" value="Drawing"> Drawing
         <input type="checkbox" name="hobbies" value="Sketching"> Sketching
         <input type="checkbox" name="hobbies" value="others"> Others
-        <input type="text" name="hobbies">
+        <input type="text" name="hobbies" >
       </div>
 
       <div class="qualification">
